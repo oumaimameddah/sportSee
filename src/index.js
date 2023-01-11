@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+import './styles/index.scss';
 import reportWebVitals from './reportWebVitals';
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <Router>
+          <Header />
+          <Sidebar />
+          <Routes>
+              <Route path="/" element={<Navigate to="/home"/>} />
+              <Route path="/home" element={<div className="element">HOME</div>} />
+              <Route path="/user/:userId" element={<div className="element">ROUTE USER ID</div>} />
+              <Route path="/settings" element={<div className="element">ROUTE SETTINGS</div>} />
+              <Route path="/community" element={<div className="element">ROUTE COMMUNITY</div>} />
+              <Route path="*" element={<div className="element">ERROR 404</div>} />
+          </Routes>
+      </Router>
   </React.StrictMode>
 );
 
