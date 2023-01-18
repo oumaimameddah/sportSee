@@ -12,7 +12,7 @@ function Header() {
                     <Link to="/" className="header__link">
                         <li>Accueil</li>
                     </Link>
-                    <Link to="/user/55" className="header__link">
+                    <Link to="/user/18" className="header__link">
                         <li>Profil</li>
                     </Link>
                     <Link to="/settings" className="header__link">

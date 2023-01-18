@@ -5,6 +5,7 @@ import './styles/index.scss';
 import reportWebVitals from './reportWebVitals';
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Dashboard from "./pages/Dashboard";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,7 @@ root.render(
           <Routes>
               <Route path="/" element={<Navigate to="/home"/>} />
               <Route path="/home" element={<div className="element">HOME</div>} />
-              <Route path="/user/:userId" element={<div className="element">ROUTE USER ID</div>} />
+              <Route path="/user/:id" element={<Dashboard />} />
               <Route path="/settings" element={<div className="element">ROUTE SETTINGS</div>} />
               <Route path="/community" element={<div className="element">ROUTE COMMUNITY</div>} />
               <Route path="*" element={<div className="element">ERROR 404</div>} />
