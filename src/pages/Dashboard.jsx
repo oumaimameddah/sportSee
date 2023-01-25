@@ -15,6 +15,7 @@ import Kpi from "../components/dashboard/Kpi";
 
 function Dashboard() {
     let { id } = useParams();
+    let { switcher } = useParams();
     const token = localStorage.getItem("accessToken");
     const [getUserById, setgetUserById] = useState({});
     const [getUserActivityById, setgetUserActivityById] = useState({});
@@ -23,11 +24,11 @@ function Dashboard() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const fetch = async (id) => {
-            const USER = await getUser(id);
-            const ACTIVITY = await getActivity(id);
-            const AVERAGE_SESSIONS = await getAverageSessions(id);
-            const PERFORMANCE = await getPerformance(id);
+        const fetch = async (id, switcher) => {
+            const USER = await getUser(id, switcher);
+            const ACTIVITY = await getActivity(id, switcher);
+            const AVERAGE_SESSIONS = await getAverageSessions(id, switcher);
+            const PERFORMANCE = await getPerformance(id, switcher);
 
             setgetUserById(USER);
             setgetUserActivityById(ACTIVITY);
@@ -35,8 +36,8 @@ function Dashboard() {
             setgetUserPerformanceById(PERFORMANCE);
             setIsLoading(false);
         };
-        fetch(id);
-    }, [id]);
+        fetch(id, switcher);
+    }, [id, switcher]);
 
     const USER_CLASS = !isLoading ?
         new User(getUserById?.userInfos.firstName,
@@ -55,7 +56,7 @@ function Dashboard() {
                 (
                     <p>Loading data... Tik Tak Tok...</p>
                 ) : (
-                    <section>
+                    <>
                         <div className="dashboardHeader">
                             <h1 className="dashboardHeader__title">Bonjour<span
                                 className="dashboardHeader__name">{" " + USER_CLASS.firstName}</span></h1>
@@ -63,10 +64,10 @@ function Dashboard() {
                         </div>
                         <div className="dashboard__charts">
                             <div className="dashboard__charts-left">
-                                {/*<Activity userActivityData={getUserActivityById} />*/}
-                                {/*<AverageSession averageSessionsData={getUserAverageSessionById} />*/}
-                                {/*<Performance performanceData={getUserPerformanceById} />*/}
-                                {/*<Score scoreData={USER_CLASS.arrayOfPercentScore} />*/}
+                                <Activity userActivityData={getUserActivityById} />
+                                <AverageSession averageSessionsData={getUserAverageSessionById} />
+                                <Performance performanceData={getUserPerformanceById} />
+                                <Score scoreData={USER_CLASS.arrayOfPercentScore} />
                             </div>
                             <div className="dashboard__charts-right">
                                 <Kpi
@@ -99,7 +100,7 @@ function Dashboard() {
                                 />
                             </div>
                         </div>
-                    </section>
+                    </>
                 )
             }
         </div>

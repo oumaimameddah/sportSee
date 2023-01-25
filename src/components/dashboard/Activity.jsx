@@ -21,7 +21,7 @@ const Activity = ({ userActivityData }) => {
     const ACTIVITY_CLASS = new UserActivity(userActivityData);
 
     return (
-        <div className="activity">
+        <section className="activity">
             <h6 className="activity__title">Activité quotidienne</h6>
             <ResponsiveContainer>
                 <BarChart
@@ -84,7 +84,7 @@ const Activity = ({ userActivityData }) => {
                     />
                 </BarChart>
             </ResponsiveContainer>
-        </div>
+        </section>
     );
 };
 

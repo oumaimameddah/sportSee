@@ -10,7 +10,7 @@ const Performance = ({ performanceData }) => {
     const PERFORMANCE_CLASS = new UserPerformance(performanceData);
 
     return (
-        <div className="performance">
+        <section className="performance">
             <RadarChart
                 outerRadius={65}
                 width={230}
@@ -39,7 +39,7 @@ const Performance = ({ performanceData }) => {
                     fillOpacity={0.6}
                 />
             </RadarChart>
-        </div>
+        </section>
     );
 };
 

@@ -4,11 +4,13 @@
   justify-content: space-around;
   width: 85%;
   height: 100%;
-  margin-left: 185px;
+  padding-left: 5%;
+  margin: auto;
 
   .dashboard__charts {
     display: flex;
     height: 65%;
+    justify-content: space-between;
   }
 
   .dashboard__charts-left {
@@ -16,8 +18,7 @@
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: space-between;
-    width: 74%;
-    height: 100%;
+    width: 73%;
   }
 
   .dashboard__charts-right {
