@@ -12,7 +12,7 @@ yarn
 * En se plaçant dans ce repo du back-end, installer ses dépendances : yarn
 * Lancer le back-end sur le port 3000 (port par défaut) : yarn dev
 
-### Installation et lancement du _front-end_
+## Installation et lancement du _front-end_
 
 * Cloner le présent repo du front-end: git clone https://github.com/oumaimameddah/sportSee.git
 * En se plaçant dans ce repo du front-end, installer ses dépendances : npm install
