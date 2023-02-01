@@ -16,6 +16,12 @@ const RenderLegend = (props) => {
     );
 };
 
+/**
+ * @description A component that provides a pie chart of the User's Score.
+ * @property {Function} Score print out all the data visualization
+ * @param {array} scoreData - the score of the user
+ * @returns { HTMLElement}
+ */
 const Score = ({scoreData}) => {
 
     return (

@@ -4,6 +4,14 @@ import {AreaChart, Area, XAxis, YAxis, Tooltip} from "recharts";
 import UserAverageSession from "../../models/UserAverageSession";
 import "../../styles/averageSession.scss";
 
+/**
+ * @function AverageSession
+ * @description Recharts line graph that show average duration in minutes of user's sport sessions
+ * @param { Object } averageSessionsData All the data needed for the Line chart
+ * @param { Array.<Objects> } averageSessionsData.sessions - the sessions of the user
+ * @param { Number } averageSessionsData.userId - the Id of the user
+ * @returns { HTMLElement }
+ */
 const AverageSession = ({averageSessionsData}) => {
 
     const AVERAGE_SESSIONS_CLASS = new UserAverageSession(averageSessionsData);

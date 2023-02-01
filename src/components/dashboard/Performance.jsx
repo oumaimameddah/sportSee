@@ -4,7 +4,15 @@ import {Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,} from "re
 import UserPerformance from "../../models/UserPerformance";
 import "../../styles/performance.scss"
 
-
+/**
+ * @description A component that provides a RadarChart of the User's Performance.
+ * @property {Function} Performance print out all the data visualization
+ * @param { Object } performanceData
+ * @param { Number } performanceData.userId - the id of the user
+ * @param { Object } performanceData.kind - the types of performance
+ * @param { Array.<Object> } performanceData.data - the performance data of the user
+ * @returns { HTMLElement}
+ */
 const Performance = ({ performanceData }) => {
 
     const PERFORMANCE_CLASS = new UserPerformance(performanceData);

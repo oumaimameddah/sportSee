@@ -1,6 +1,9 @@
 
 class UserActivity {
-
+    /**
+     * Assign the user activity details.
+     * @param {Object} averageSessions the value from the API.
+     */
     constructor(data) {
         this._activities = data.sessions.map((session) => {
             return {

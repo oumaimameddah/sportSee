@@ -1,5 +1,8 @@
 class UserPerformance {
-
+    /**
+     * Assign the performance details to the User.
+     * @param {object} performances set the performance name with the right value.
+     */
     constructor(performances) {
 
         this.kind = performances.kind;

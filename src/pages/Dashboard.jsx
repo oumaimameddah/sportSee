@@ -13,6 +13,11 @@ import cheeseburger from "../assets/cheeseburger.svg";
 import apple from "../assets/apple.svg";
 import Kpi from "../components/dashboard/Kpi";
 
+/**
+ * @function Dashboard
+ * @description Return the the user dashboard
+ * @returns { HTMLElement }
+ */
 function Dashboard() {
     let { id } = useParams();
     let { switcher } = useParams();

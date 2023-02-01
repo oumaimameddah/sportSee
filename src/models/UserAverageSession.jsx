@@ -1,5 +1,8 @@
 class UserAverageSession {
-
+    /**
+     * Assign the average sessions details to the User.
+     * @param {Object} averageSessions the value from the API
+     */
     constructor(averageSessions) {
 
         this._averageSessions = averageSessions.sessions.map((session) => {

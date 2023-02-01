@@ -1,4 +1,15 @@
 class User {
+    /**
+     * User details
+     * @param {string} firstName user firstname
+     * @param {string} lastName user lastname
+     * @param {number} age user age
+     * @param {number} score user score report
+     * @param {number} calorie user calorie report
+     * @param {number} protein user protein report
+     * @param {number} carbohydrate user carbohydrate report
+     * @param {number} lipid user lipid report
+     */
     constructor(firstName, lastName, age, score, calorie, protein, carbohydrate, lipid) {
         this._firstName = firstName;
         this._lastName = lastName;

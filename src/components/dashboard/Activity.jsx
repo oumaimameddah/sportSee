@@ -4,6 +4,18 @@ import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveC
 import UserActivity from "../../models/UserActivity";
 import "../../styles/activity.scss";
 
+/**
+ * @file Activity, a REACT functional component mount with Recharts library
+ * @see {@link https://recharts.org/} for further information.
+ */
+
+/**
+ * @function CustomTooltip
+ * @description Component to custom the tooltip of the chart
+ * @param { Boolean } active - true if bars hovered over, false if not
+ * @param { Object } payload - the data data of overflown bars
+ * @returns { HTMLElement }
+ */
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         return (
@@ -16,8 +28,20 @@ const CustomTooltip = ({ active, payload }) => {
     return null;
 };
 
+/**
+ * @function Activity
+ * @description Component that shows a bar chart of the weight and calories burned for the day by the user
+ * @param { Object } userActivity
+ * @param { Array.<Objects> } userActivity.sessions - the sessions of the user
+ * @param { Number } userActivity.userId - the Id of the user
+ * @returns { HTMLElement }
+ */
 const Activity = ({ userActivityData }) => {
 
+    /**
+     * Link to User class.
+     * See {@link UserActivity}
+     */
     const ACTIVITY_CLASS = new UserActivity(userActivityData);
 
     return (

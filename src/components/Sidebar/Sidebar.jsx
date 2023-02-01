@@ -4,6 +4,12 @@ import yoga from "../../assets/yoga.svg";
 import natation from "../../assets/swimmer.svg";
 import velo from "../../assets/biker.svg";
 import alter from "../../assets/dumbbell.svg";
+
+/**
+ * @description The Component that show the Sidebar nav
+ * @property {Function} Sidebar nav by activitie
+ * @returns { HTMLElement}
+ */
 function Sidebar() {
     return(
         <div className="sidebar">

@@ -1,6 +1,12 @@
 import '../../styles/header.scss';
 import {Link} from "react-router-dom";
 import logo from "../../assets/logo.svg";
+
+/**
+ * @function Header
+ * @description Show the header of the site with the navigation
+ * @returns { HTMLElement }
+ */
 function Header() {
     return(
         <header>
@@ -12,7 +18,7 @@ function Header() {
                     <Link to="/" className="header__link">
                         <li>Accueil</li>
                     </Link>
-                    <Link to="/user/18" className="header__link">
+                    <Link to="/" className="header__link">
                         <li>Profil</li>
                     </Link>
                     <Link to="/settings" className="header__link">

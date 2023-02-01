@@ -1,6 +1,10 @@
 import {useNavigate} from "react-router-dom";
 import '../styles/home.scss';
-
+/**
+ * @function Home
+ * @description Return the the home page
+ * @returns { HTMLElement }
+ */
 const Home = () => {
     const navigate = useNavigate();
 
