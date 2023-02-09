@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom";
 import '../styles/home.scss';
 /**
  * @function Home
- * @description Return the the home page
+ * @description Return the home page
  * @returns { HTMLElement }
  */
 const Home = () => {

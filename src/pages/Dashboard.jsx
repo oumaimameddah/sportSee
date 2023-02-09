@@ -15,7 +15,7 @@ import Kpi from "../components/dashboard/Kpi";
 
 /**
  * @function Dashboard
- * @description Return the the user dashboard
+ * @description Return thz user dashboard
  * @returns { HTMLElement }
  */
 function Dashboard() {

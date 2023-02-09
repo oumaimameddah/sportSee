@@ -8,9 +8,10 @@ import alter from "../../assets/dumbbell.svg";
 /**
  * @description The Component that show the Sidebar nav
  * @property {Function} Sidebar nav by activitie
- * @returns { HTMLElement}
+ * @returns {JSX.Element}
  */
 function Sidebar() {
+    const annee = new Date().getFullYear();
     return(
         <div className="sidebar">
             <nav className="sidebar__nav">
@@ -21,6 +22,7 @@ function Sidebar() {
                     <img src={alter} alt="alter sports" className="logo__img" />
                 </ul>
             </nav>
+            <p className="sidebar__text">&copy;{"SportSee " + annee}</p>
         </div>
     )
 }
