@@ -40,4 +40,4 @@ HTML/CSS
 - npm v8.5.5
 =======
 
-Coded in intelliJ IDEA.
+- Visual Studio Code
