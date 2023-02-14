@@ -7,9 +7,17 @@
   padding-left: 5%;
   margin: auto;
 
+  @media(max-width: 1024px) {
+    justify-content: flex-start;
+    padding-left: 13%;
+    margin: 0;
+    width: 96%;
+  }
+
   .dashboard__charts {
     display: flex;
     height: 65%;
+    margin-top: 22px;
     justify-content: space-between;
   }
 
@@ -19,6 +27,9 @@
     align-content: space-between;
     justify-content: space-between;
     width: 73%;
+    @media(max-width: 1024px) {
+        width: 90%;
+    }
   }
 
   .dashboard__charts-right {
